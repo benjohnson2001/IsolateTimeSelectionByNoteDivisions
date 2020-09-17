@@ -67,10 +67,18 @@ function getSelectedTracks()
 
 end
 
+function unselectMasterTrack()
+
+	local commandId = reaper.NamedCommandLookup("_SWS_UNSELMASTER")
+  reaper.Main_OnCommand(commandId, 0)
+end
+
 function unselectAllTracks()
 
 	local commandId = 40297
   reaper.Main_OnCommand(commandId, 0)
+
+  unselectMasterTrack()
 end
 
 function restoreTrackSelections(selectedTrackIndices)
