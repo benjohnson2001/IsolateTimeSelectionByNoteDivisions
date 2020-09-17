@@ -89,8 +89,8 @@ end
 
 function unselectMasterTrack()
 
-	local commandId = reaper.NamedCommandLookup("_SWS_UNSELMASTER")
-  reaper.Main_OnCommand(commandId, 0)
+	local masterTrack = reaper.GetMasterTrack(activeProjectIndex)
+	reaper.SetTrackSelected(masterTrack, false)
 end
 
 function unselectAllTracks()
