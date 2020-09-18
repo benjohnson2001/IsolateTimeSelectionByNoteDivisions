@@ -1,0 +1,1 @@
+![isolateTimeSelectionByNoteDivisions](isolateTimeSelectionByNoteDivisions.gif)
